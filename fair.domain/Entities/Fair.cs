@@ -15,16 +15,14 @@ namespace fair.domain.Entities
             FairName = string.Empty;
             Register = string.Empty;
             Address = string.Empty;
-            Neighborhood = string.Empty;
-            Latitude = string.Empty;
-            Longitude = string.Empty;
+            Neighborhood = string.Empty;            
             SetCens = string.Empty;
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public long Latitude { get; set; }
+        public long Longitude { get; set; }
         public string SetCens { get; set; }
         public string AreaP { get; set; }
         public int DistrictCode { get; set; }

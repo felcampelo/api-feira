@@ -18,12 +18,12 @@ namespace fair.infra.Configuration
 
             builder.Property(o => o.Latitude)
            .HasColumnName("LAT")
-           .HasColumnType("varchar(128)")
+           .HasColumnType("bigint")
            .IsRequired();
 
             builder.Property(o => o.Longitude)
            .HasColumnName("LONG")
-           .HasColumnType("varchar(128)")
+           .HasColumnType("bigint")
            .IsRequired();
 
             builder.Property(o => o.SetCens)

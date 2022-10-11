@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace fair.ioc.Infrastructure
 {
-    internal class InfraDependencyResolver
+    internal class InfraDependencyResolver 
     {
         internal static IServiceCollection ChildServiceRegister(IServiceCollection services, IConfiguration configuration)
         {

@@ -4,10 +4,11 @@ using fair.infra.Repository.Base;
 using fair.domain.Entities;
 using fair.infra.Context;
 using Microsoft.EntityFrameworkCore;
+using fair.domain.RepositoryInterfaces;
 
 namespace fair.infra.Repository
 {
-    public class FairRepository : BaseRepository<Fair, int>
+    public class FairRepository : BaseRepository<Fair, int>, IFairRepository
     {
         public FairRepository(FairContext context)
             : base(context)
