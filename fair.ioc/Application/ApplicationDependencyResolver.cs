@@ -8,6 +8,7 @@ namespace fair.ioc.Application
     {
         internal static void ChildServiceRegister(IServiceCollection services)
         {
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IFairService, FairService>();
         }
     }
