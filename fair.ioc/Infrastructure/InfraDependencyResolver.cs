@@ -1,5 +1,5 @@
 ﻿using EntityFrameworkCore.UseRowNumberForPaging;
-using feira.infra.Context;
+using fair.infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

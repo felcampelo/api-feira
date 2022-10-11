@@ -1,7 +1,8 @@
 ﻿using fair.domain.Entities.Base;
 using fair.domain.RepositoryInterfaces;
-using feira.infra.Context;
+using fair.infra.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Linq.Expressions;
 
 namespace fair.infra.Repository.Base
@@ -43,13 +44,12 @@ namespace fair.infra.Repository.Base
             }
         }
 
-        public virtual async Task<bool> DeleteById(KeyType id)
+        public virtual async Task DeleteById(KeyType id)
         {
             try
             {
                 var entity = await this.GetSingleById(id);
                 await this.Delete(entity);
-                return true;
             }
             catch (Exception)
             {
@@ -57,13 +57,25 @@ namespace fair.infra.Repository.Base
             }
         }
 
-        public virtual async Task<bool> Delete(T entity)
+        public virtual async Task Delete(T entity)
         {
             try
             {
                 context.Set<T>().Remove(entity);
                 await context.SaveChangesAsync();
-                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public virtual async Task Update(T entity)
+        {
+            try
+            {
+                context.Set<T>().Update(entity);
+                await context.SaveChangesAsync();
             }
             catch (Exception)
             {

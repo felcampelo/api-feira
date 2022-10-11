@@ -1,6 +1,9 @@
-﻿using fair.infra.Repository.Base;
-using feira.domain.Entities;
-using feira.infra.Context;
+﻿using fair.domain.Filters;
+using fair.domain.Queries;
+using fair.infra.Repository.Base;
+using fair.domain.Entities;
+using fair.infra.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace fair.infra.Repository
 {
@@ -10,16 +13,21 @@ namespace fair.infra.Repository
             : base(context)
         { }
 
-        public async Task GetFairs()
-        {
-            try
-            {
-                //await this.GetWhere(c=>)
-            }
-            catch (Exception err)
-            {
-                throw err;
-            }
-        }
+        public async Task InsertFair(Fair fair) =>
+            await this.Insert(fair);
+
+        public async Task UpdateFair(Fair fair) =>
+            await this.Update(fair);
+
+        public async Task DeleteFair(int idFair) =>
+            await this.DeleteById(idFair);
+
+        public async Task GetFairs(FairFilter filter) =>
+
+            await this.GetWhere(FairQueries.GetFairsByFilter(filter))
+                .Select(c => new
+                {
+                    c.Id
+                }).ToListAsync();
     }
 }

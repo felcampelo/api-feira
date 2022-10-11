@@ -1,4 +1,4 @@
-﻿using feira.domain.Entities;
+﻿using fair.domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

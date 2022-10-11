@@ -1,13 +1,8 @@
 ﻿using fair.infra.Configuration;
-using feira.domain.Entities;
+using fair.domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace feira.infra.Context
+namespace fair.infra.Context
 {
     public class FairContext : DbContext
     {

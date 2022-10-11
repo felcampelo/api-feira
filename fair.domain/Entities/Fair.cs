@@ -1,7 +1,7 @@
 ﻿using fair.domain.Entities.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace feira.domain.Entities
+namespace fair.domain.Entities
 {
     public class Fair : IBaseEntity<int>
     {
