@@ -3,17 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feira.api", "feira.api\feira.api.csproj", "{CF4C4CF9-0246-4FD5-8589-4D6FF52B4E70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.api", "fair.api\fair.api.csproj", "{CF4C4CF9-0246-4FD5-8589-4D6FF52B4E70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feira.infra", "feira.infra\feira.infra.csproj", "{54BA98E1-0399-4336-8AC2-12FCFBA203CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.infra", "fair.infra\fair.infra.csproj", "{54BA98E1-0399-4336-8AC2-12FCFBA203CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feira.domain", "feira.domain\feira.domain.csproj", "{6EEE5F6E-7003-46B6-8336-094803B177F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.domain", "fair.domain\fair.domain.csproj", "{6EEE5F6E-7003-46B6-8336-094803B177F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feira.ioc", "feira.ioc\feira.ioc.csproj", "{7892279A-846B-4EF9-86EE-F1267564AAE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.ioc", "fair.ioc\fair.ioc.csproj", "{7892279A-846B-4EF9-86EE-F1267564AAE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feira.application", "feira.application\feira.application.csproj", "{BC914114-B82D-43FE-A0D8-671B105C9295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.application", "fair.application\fair.application.csproj", "{BC914114-B82D-43FE-A0D8-671B105C9295}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "feira.test", "feira.test\feira.test.csproj", "{46646FF2-A8FB-4762-9E14-F2141057D5C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.test", "fair.test\fair.test.csproj", "{46646FF2-A8FB-4762-9E14-F2141057D5C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{4DB6392F-78AB-4602-8CA7-3228DA6D58E6}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\Felipe\Downloads\feiras_livres_1429113213\FEIRAS_LIVRES\CSV\DEINFO_DADOS_AB_FEIRASLIVRES\DEINFO_AB_FEIRASLIVRES_2014.csv = ..\..\..\Users\Felipe\Downloads\feiras_livres_1429113213\FEIRAS_LIVRES\CSV\DEINFO_DADOS_AB_FEIRASLIVRES\DEINFO_AB_FEIRASLIVRES_2014.csv
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
