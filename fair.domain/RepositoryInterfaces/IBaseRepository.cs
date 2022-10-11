@@ -7,6 +7,6 @@ namespace fair.domain.RepositoryInterfaces
         Task<T> Insert(T entity);
         Task DeleteById(KeyType id);
         Task Delete(T entity);
-        Task<T?> GetSingleById(KeyType id);
+        Task<T?> GetSingleById(KeyType id);        
     }
 }

@@ -23,6 +23,12 @@ namespace fair.infra.Repository
         public async Task DeleteFair(int idFair) =>
             await this.DeleteById(idFair);
 
+        public async Task<Fair?> GetFairById(int idFair) =>
+            await this.GetSingleById(idFair);
+
+        public async Task<Fair?> GetFirstFair() =>
+            await this.GetAll().OrderBy(c => c.Id).FirstOrDefaultAsync();
+
         public async Task<List<Fair>> GetFairs(FairFilter filter) =>
             await this.GetWhere(FairQueries.GetFairsByFilter(filter)).ToListAsync();
     }
