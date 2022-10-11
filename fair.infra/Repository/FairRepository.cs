@@ -14,7 +14,7 @@ namespace fair.infra.Repository
             : base(context)
         { }
 
-        public async Task InsertFair(Fair fair) =>
+        public async Task CreateFair(Fair fair) =>
             await this.Insert(fair);
 
         public async Task UpdateFair(Fair fair) =>
@@ -23,12 +23,7 @@ namespace fair.infra.Repository
         public async Task DeleteFair(int idFair) =>
             await this.DeleteById(idFair);
 
-        public async Task GetFairs(FairFilter filter) =>
-
-            await this.GetWhere(FairQueries.GetFairsByFilter(filter))
-                .Select(c => new
-                {
-                    c.Id
-                }).ToListAsync();
+        public async Task<List<Fair>> GetFairs(FairFilter filter) =>
+            await this.GetWhere(FairQueries.GetFairsByFilter(filter)).ToListAsync();
     }
 }

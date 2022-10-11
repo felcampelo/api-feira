@@ -32,55 +32,27 @@ namespace fair.infra.Repository.Base
 
         public virtual async Task<T> Insert(T entity)
         {
-            try
-            {
-                context.Set<T>().Add(entity);
-                await context.SaveChangesAsync();
-                return entity;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            context.Set<T>().Add(entity);
+            await context.SaveChangesAsync();
+            return entity;
         }
 
         public virtual async Task DeleteById(KeyType id)
         {
-            try
-            {
-                var entity = await this.GetSingleById(id);
-                await this.Delete(entity);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            var entity = await this.GetSingleById(id);
+            await this.Delete(entity);
         }
 
         public virtual async Task Delete(T entity)
         {
-            try
-            {
-                context.Set<T>().Remove(entity);
-                await context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            context.Set<T>().Remove(entity);
+            await context.SaveChangesAsync();
         }
 
         public virtual async Task Update(T entity)
         {
-            try
-            {
-                context.Set<T>().Update(entity);
-                await context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            context.Set<T>().Update(entity);
+            await context.SaveChangesAsync();
         }
     }
 }

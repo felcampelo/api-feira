@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using fair.application.Contract;
+using fair.application.Service;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace fair.ioc.Application
 {
@@ -6,7 +8,7 @@ namespace fair.ioc.Application
     {
         internal static void ChildServiceRegister(IServiceCollection services)
         {
-
+            services.AddScoped<IFairService, FairService>();
         }
     }
 }

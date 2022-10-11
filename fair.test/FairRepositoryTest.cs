@@ -17,7 +17,7 @@ namespace fair.test
         }
 
         [TestMethod]
-        public async Task Insert_Fair()
+        public async Task Create()
         {
             var repository = serviceProvider.GetService<IFairRepository>();
 
@@ -41,25 +41,25 @@ namespace fair.test
                 SubCityHallCode = 234
             };
 
-            await repository.InsertFair(newFair);
+            await repository.CreateFair(newFair);
 
             Assert.IsTrue(newFair.Id > 0);
         }
 
         [TestMethod]
-        public async Task Update_Fair()
+        public async Task Update()
         {
 
         }
 
         [TestMethod]
-        public async Task Get_Fair_By_Filter()
+        public async Task Get_Fairs()
         {
 
         }
 
         [TestMethod]
-        public async Task Delete_Fair_By_Id()
+        public async Task Delete()
         {
 
         }

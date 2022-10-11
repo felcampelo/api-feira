@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\fair.application\fair.application.csproj" />
     <ProjectReference Include="..\fair.ioc\fair.ioc.csproj" />
   </ItemGroup>
 

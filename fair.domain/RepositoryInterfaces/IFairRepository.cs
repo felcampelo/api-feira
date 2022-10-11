@@ -5,9 +5,9 @@ namespace fair.domain.RepositoryInterfaces
 {
     public interface IFairRepository
     {
-        Task InsertFair(Fair fair);
+        Task CreateFair(Fair fair);
         Task UpdateFair(Fair fair);
         Task DeleteFair(int idFair);
-        Task GetFairs(FairFilter filter);
+        Task<List<Fair>> GetFairs(FairFilter filter);
     }
 }
