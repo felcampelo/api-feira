@@ -15,11 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.application", "fair.ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fair.test", "fair.test\fair.test.csproj", "{46646FF2-A8FB-4762-9E14-F2141057D5C8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datasource", "datasource", "{4DB6392F-78AB-4602-8CA7-3228DA6D58E6}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Users\Felipe\Downloads\feiras_livres_1429113213\FEIRAS_LIVRES\CSV\DEINFO_DADOS_AB_FEIRASLIVRES\DEINFO_AB_FEIRASLIVRES_2014.csv = ..\..\..\Users\Felipe\Downloads\feiras_livres_1429113213\FEIRAS_LIVRES\CSV\DEINFO_DADOS_AB_FEIRASLIVRES\DEINFO_AB_FEIRASLIVRES_2014.csv
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
