@@ -10,16 +10,18 @@ namespace fair.api.Controllers.V1
     [Route("v{version:apiVersion}/[controller]")]
     public class FairController : BaseController
     {
+        private ILogger<FairController> logger;
         private IFairService service;
 
-        public FairController(IFairService service)
+        public FairController(IFairService service, ILogger<FairController> logger)
         {
             this.service = service;
+            this.logger = logger;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetFairs([FromQuery] FairFilter filter)
-        {
+        {            
             var ret = await this.service.GetFairs(filter);
             return ValidResult(ret);
         }

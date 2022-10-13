@@ -1,5 +1,6 @@
 ﻿using fair.domain.Entities.Custom;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using System.Net;
 
 namespace fair.api.Controllers
@@ -14,7 +15,11 @@ namespace fair.api.Controllers
         }
 
         [ApiExplorerSettings(IgnoreApi = true)]
-        protected ActionResult InternalServerError(string? message) =>
-           StatusCode((int)HttpStatusCode.InternalServerError, message);
+        protected ActionResult InternalServerError(string? message)
+        {
+            Log.Error(message);
+            return StatusCode((int)HttpStatusCode.InternalServerError, message);
+        }
+
     }
 }
