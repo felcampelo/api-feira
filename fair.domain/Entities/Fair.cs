@@ -5,37 +5,23 @@ namespace fair.domain.Entities
 {
     public class Fair : IBaseEntity<int>
     {
-        public Fair()
-        {
-            AreaP = string.Empty;
-            District = string.Empty;
-            SubCityHall = string.Empty;
-            Region5 = string.Empty;
-            Region8 = string.Empty;
-            FairName = string.Empty;
-            Register = string.Empty;
-            Address = string.Empty;
-            Neighborhood = string.Empty;            
-            SetCens = string.Empty;
-        }
-
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public long Latitude { get; set; }
         public long Longitude { get; set; }
-        public string SetCens { get; set; }
-        public string AreaP { get; set; }
+        public string SetCens { get; set; } = null!;
+        public string AreaP { get; set; } = null!;
         public int DistrictCode { get; set; }
-        public string District { get; set; }
+        public string District { get; set; } = null!;
         public int SubCityHallCode { get; set; }
-        public string SubCityHall { get; set; }
-        public string Region5 { get; set; }
-        public string Region8 { get; set; }
-        public string FairName { get; set; }
-        public string Register { get; set; }
-        public string Address { get; set; }
+        public string SubCityHall { get; set; } = null!;
+        public string Region5 { get; set; } = null!;
+        public string Region8 { get; set; } = null!;
+        public string FairName { get; set; } = null!;
+        public string Register { get; set; } = null!;
+        public string Address { get; set; } = null!;
         public string? Number { get; set; }
-        public string Neighborhood { get; set; }
+        public string Neighborhood { get; set; } = null!;
         public string? Reference { get; set; }
     }
 }
