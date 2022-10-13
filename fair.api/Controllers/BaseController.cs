@@ -10,6 +10,9 @@ namespace fair.api.Controllers
         [ApiExplorerSettings(IgnoreApi = true)]
         protected ActionResult ValidResult(GenericResult result)
         {
+            if (!string.IsNullOrEmpty(result.ErrorMessage))
+                result.Success = false;
+
             return result.Success ? Ok(result)
                 : InternalServerError(result.ErrorMessage);
         }
