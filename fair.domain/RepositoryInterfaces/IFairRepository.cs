@@ -8,8 +8,6 @@ namespace fair.domain.RepositoryInterfaces
         Task CreateFair(Fair fair);
         Task UpdateFair(Fair fair);
         Task DeleteFair(int idFair);
-        Task<Fair?> GetFairById(int idFair);
-        Task<Fair?> GetFirstFair();
         Task<List<Fair>> GetFairs(FairFilter filter);
     }
 }

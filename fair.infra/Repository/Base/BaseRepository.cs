@@ -16,14 +16,6 @@ namespace fair.infra.Repository.Base
             this.context = context;
         }
 
-        public virtual IQueryable<T> GetAll()
-        {
-            var query = context.Set<T>()
-                .AsNoTracking();
-
-            return query;
-        }
-
         public virtual IQueryable<T> GetWhere(Expression<Func<T, bool>> where)
         {
             var query = context.Set<T>()
