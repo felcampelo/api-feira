@@ -54,8 +54,7 @@ try
 
     var app = builder.Build();
 
-    app.UseMiddleware<ErrorHandlingMiddleware>();
-    //app.UseMiddleware<RequestSerilLogMiddleware>()
+    app.UseMiddleware<ErrorHandlingMiddleware>();    
 
     if (app.Environment.IsDevelopment())
     {
