@@ -8,6 +8,7 @@ namespace fair.api.Controllers.V1
     [ApiController]
     [ApiVersion("1.0")]
     [Route("v{version:apiVersion}/[controller]")]
+    [Produces("application/json")]
     public class FairController : BaseController
     {
         private ILogger<FairController> logger;
