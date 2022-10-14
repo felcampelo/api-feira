@@ -25,7 +25,7 @@ namespace fair.application.Service
             GenericResult result = new GenericResult { Success = true };
 
             try
-            {                
+            {
                 var fairs = await this.fairRepository.GetFairs(filter);
                 result.Content = fairs.Select(c => mapper.Map<FairDTO>(c));
                 result.TotalRecords = fairs.Count;
