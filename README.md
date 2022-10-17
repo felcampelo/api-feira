@@ -87,18 +87,24 @@ a) Clique com o botão direito na solução e escolha a opção "Open In Termina
 
 Na janela do terminal, vamos antes instalar a ferramenta que irá gerar o relatório da nossa cobertura testes/código. Execute o código abaixo no terminal:
 
+```
 dotnet tool install -g dotnet-reportgenerator-globaltool
+```
 
 b) Após isso, vamos gerar o arquivo com os dados dos testes:
 
+```
 dotnet test --collect: "XPlat Code Coverage" 
+```
 
 Após o comando acima, uma pasta será criada dentro da pasta do projeto de testes (fair.tests) chamada "TestResults". Nela irá conter uma pasta com um GUID. A cada execução do comando acima um identificador novo é gerado. Dentro da pasta do identiticador, um arquivo chamado coverage.cobertura.xml será criado.
 Você deve copiar o path desse arquivo para inserir no próximo passo.
 
 c) Com o path copiado, você deve executar o comando abaixo, substituindo o path abaixo pelo path do arquivo na sua máquina:
 
+```
 reportgenerator -reports:"C:\Projetos\Felipe\api-feira\fair.tests\TestResults\c4011037-8484-4f19-b198-dc2cd54ca494\coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:Html
+```
 
 Após executar o comando acima, uma pasta chamada "coveragereport" será gerada no diretório "api-feira". Abra a pasta e execute o arquivo "index.html". Nele irá conter todos os dados de cobetura dos testes/código:
 
