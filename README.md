@@ -8,13 +8,13 @@ Pré-Requisitos para rodar o projeto:
 
 Índice: 
 
-[1. Setup do Projeto](#1)
+[1. Setup do Projeto](#1-Setup-do-Projeto)
 [2. Estrutura do Projeto ](#2)
 3. Executando O Projeto
 4. Exemplos de Requisições/Respostas
 5. Documentando Cobertura de testes/código
 
-### 1
+### 1 - Setup do Projeto
 1. Setup do Projeto
 
 Após clonar o repositório deste projeto na máquina, clique e abra o arquivo de solução chamado "fair.api.sln". É necessário antes de mais nada criar o banco de dados, a tabela e executar a carga dos dados que serão consumidos pela aplicação.
