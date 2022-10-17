@@ -8,13 +8,13 @@ Pré-Requisitos para rodar o projeto:
 
 Índice: 
 
-[1. Setup do Projeto](#pookie)
-[2. Estrutura do Projeto ](#2)
-3. Executando O Projeto
-4. Exemplos de Requisições/Respostas
-5. Documentando Cobertura de testes/código
+[1. Setup do Projeto](#t1) <br/>
+[2. Estrutura do Projeto ](#t2)  <br/>
+[3. Executando O Projeto](#t3)  <br/>
+[4. Exemplos de Requisições/Respostas](#t4)  <br/>
+[5. Documentando Cobertura de testes/código](#t5)  <br/>
 
-<h1><a name="pookie">1 - Setup do Projeto</a></h1>
+<h1><a name="t1">1 - Setup do Projeto</a></h1>
 
 Após clonar o repositório deste projeto na máquina, clique e abra o arquivo de solução chamado "fair.api.sln". É necessário antes de mais nada criar o banco de dados, a tabela e executar a carga dos dados que serão consumidos pela aplicação.
 Para tal, no projeto "fair.api", existe uma pasta chamada "Datasource" e uma outra chamada "Script". 
@@ -39,8 +39,8 @@ De volta ao projeto fair.api, abra o arquivo "appsettings.json". Caso o seu sql 
 ![image](https://user-images.githubusercontent.com/16122433/196056135-5afcf520-9d2f-46f4-a439-80c670aaa9c6.png)
 
 
-### 2
-**2. Estrutura do Projeto**
+<h1><a name="t2">2 - Estrutura do Projeto</a></h1>
+
 
 O Projeto foi construído utilizando-se o Asp.Net Core 6 (.net 6), Entity Framework 6, com base na arquitetura limpa (Clean Architecture), utilizando o pattern de repositórios e repositório base (Repository/Base Repository), visando respeitar aos princípios SOLID e com cobertura de testes/código documentado. 
 Utilizou-se também para a construção de logs estruturados o Serilog.
@@ -66,18 +66,17 @@ fair.tests
 - Camada responsável por executar os testes da aplicação.
 
 
-3. Executando o Projeto
+<h1><a name="t3">3 - Executando o Projeto</a></h1>
 
 Para rodar o projeto, após ter concluído a etapa 1 de setup, bastar apertar f5 e esperar que a tela do swagger apareça:
 ![image](https://user-images.githubusercontent.com/16122433/196056949-4de2519a-b57a-423b-901d-216909c536ea.png)
 
-
-4.Exemplos de Requisições/Respostas
+<h1><a name="t4">4 - Exemplos de Requisições</a></h1>
 
 O projeto possui 4 endpoints construídos com base nos conceitos REST.
 Após a etapa 3, será aberto o browser com o swagger, contendo a documentação com exemplos de requisições e respostas da api.   
 
-5. Documentando Cobertura de testes/código
+<h1><a name="t5">5 - Documentando Cobertura de testes/código</a></h1>
 
 A solução conta com um projeto de testes que visa garantir que as operações do sistema estejam funcionando.
 Para executar os testes e gerar uma documentação com informações de cobertura de código, os seguintes passos devem ser executados:
