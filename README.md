@@ -8,14 +8,14 @@ Pré-Requisitos para rodar o projeto:
 
 Índice: 
 
-[1. Setup do Projeto](#1. Setup do Projeto)
-[2. Estrutura do Projeto ](#ep)
+[1. Setup do Projeto](#1)
+[2. Estrutura do Projeto ](#2)
 3. Executando O Projeto
 4. Exemplos de Requisições/Respostas
 5. Documentando Cobertura de testes/código
 
-### 1. Setup do Projeto
-
+### 1
+1. Setup do Projeto
 
 Após clonar o repositório deste projeto na máquina, clique e abra o arquivo de solução chamado "fair.api.sln". É necessário antes de mais nada criar o banco de dados, a tabela e executar a carga dos dados que serão consumidos pela aplicação.
 Para tal, no projeto "fair.api", existe uma pasta chamada "Datasource" e uma outra chamada "Script". 
@@ -40,7 +40,7 @@ De volta ao projeto fair.api, abra o arquivo "appsettings.json". Caso o seu sql 
 ![image](https://user-images.githubusercontent.com/16122433/196056135-5afcf520-9d2f-46f4-a439-80c670aaa9c6.png)
 
 
-### ep
+### 2
 **2. Estrutura do Projeto**
 
 O Projeto foi construído utilizando-se o Asp.Net Core 6 (.net 6), Entity Framework 6, com base na arquitetura limpa (Clean Architecture), utilizando o pattern de repositórios e repositório base (Repository/Base Repository), visando respeitar aos princípios SOLID e com cobertura de testes/código documentado. 
