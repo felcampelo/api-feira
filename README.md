@@ -14,7 +14,8 @@ Pré-Requisitos para rodar o projeto:
 4. Exemplos de Requisições/Respostas
 5. Documentando Cobertura de testes/código
 
-<a name="pookie">1 - Setup do Projeto</a>
+<h1><a name="pookie">1 - Setup do Projeto</a></h1>
+<hr/>
 
 Após clonar o repositório deste projeto na máquina, clique e abra o arquivo de solução chamado "fair.api.sln". É necessário antes de mais nada criar o banco de dados, a tabela e executar a carga dos dados que serão consumidos pela aplicação.
 Para tal, no projeto "fair.api", existe uma pasta chamada "Datasource" e uma outra chamada "Script". 
